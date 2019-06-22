@@ -1,0 +1,31 @@
+footer{
+  border-top: 1px solid $gray-light;
+}
+
+.social-links{
+  a{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #e1e1e1;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    color: $black-light;
+    margin: 0 .3rem;
+    &:hover{
+      background: $primary-color;
+      color: $white;
+      border-color: $primary-color;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  footer{
+    text-align: center;
+  }
+  .footer-logo {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,314 @@
+/*------------------------------------
+ header
+------------------------------------*/
+
+.app-header {
+  //padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1230;
+  transition: all .3s ease;
+  font-family: $base-font-name;
+  background: $white;
+  box-shadow: 0 1px 10px rgba(0,0,0,.08);
+  .navbar-nav {
+    .nav-item {
+      margin-bottom: 0;
+      .nav-link, .dropdown-item{
+        color: $white;
+        //text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .dropdown-menu {
+        min-width: 12rem;
+        padding: 1rem 0;
+        margin: .5rem 0 0;
+        background-color: $white;
+        border: none;
+        border-radius: .25rem;
+        .dropdown-item{
+          padding: .5rem 1.5rem;
+          font-size: 12px;
+          &:hover{
+            background-color: transparent;
+            color: #ff5f5f;
+          }
+        }
+      }
+    }
+
+    .nav-item.active {
+      .nav-link{
+        color: #ff5f5f;
+      }
+    }
+
+    .nav-item {
+      .nav-link{
+        &:hover{
+          color: #ff5f5f;
+        }
+      }
+    }
+
+  }
+}
+
+.sticky-header{
+  padding:  0;
+  .navbar-nav {
+    .nav-link{
+      color: $black-light;
+    }
+  }
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-left: 0 !important;
+}
+
+
+// new nav
+
+//.menu-area{background: #d61a5e}
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
+  border: 0 solid rgba(0, 0, 0, .15);
+}
+
+.mainmenu a, .navbar-default .navbar-nav > li > a, .mainmenu ul li a, .navbar-expand-lg .navbar-nav .nav-link {
+  color: $black-light;
+  font-size: 13px;
+  //text-transform: uppercase;
+  font-weight: 600;
+  padding: 3px 15px;
+  display: block !important;
+}
+
+.mainmenu ul li a{
+  font-size: 14px;
+}
+
+.mainmenu ul ul .dropdown-toggle::after{
+  transform: rotate(-90deg);
+}
+
+.mainmenu .active a, .mainmenu .active a:focus, .mainmenu .active a:hover, .mainmenu li a:hover, .mainmenu li a:focus, .navbar-default .navbar-nav > .show > a, .navbar-default .navbar-nav > .show > a:focus, .navbar-default .navbar-nav > .show > a:hover {
+  color: #ff5f5f;
+  background:transparent;
+  outline: 0;
+}
+
+/*==========Sub Menu=v==========*/
+.mainmenu .collapse ul > li:hover > a {
+  background: transparent;
+  color: #ff5f5f;
+}
+
+.mainmenu .collapse ul ul > li:hover > a, .navbar-default .navbar-nav .show .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .show .dropdown-menu > li > a:hover {
+  background: transparent;
+  color: #ff5f5f;
+}
+
+.mainmenu .collapse ul ul ul > li:hover > a {
+  background: transparent;
+  color: #ff5f5f;
+}
+
+.mainmenu .collapse ul ul, .mainmenu .collapse ul ul.dropdown-menu {
+  background: $white;
+  padding: 15px;
+  box-shadow: 0 1px 10px rgba(0,0,0,.08);
+}
+
+.mainmenu .collapse ul ul ul, .mainmenu .collapse ul ul ul.dropdown-menu,
+.mainmenu .collapse ul ul ul ul, .mainmenu .collapse ul ul ul ul.dropdown-menu{
+  background: $white;
+}
+
+
+/******************************Drop-down menu work on hover**********************************/
+.mainmenu {
+  background: none;
+  border: 0 solid;
+  margin: 0;
+  padding: 0;
+  min-height: 20px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+
+  .app-header {
+    .navbar-nav, .extra-nav-link {
+      padding-top: 30px;
+
+      > li{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .mainmenu ul > li.dropdown > a{
+    padding-bottom: 30px;
+  }
+  .mainmenu ul > li.dropdown > .dropdown-menu > li.dropdown > a{
+    padding-bottom: 0px;
+  }
+
+  .mainmenu .collapse ul li:hover > ul {
+    display: block
+  }
+  .mainmenu .collapse ul ul {
+    position: absolute;
+    top: 100%;
+    //left: 0;
+    min-width: 250px;
+    display: none
+  }
+  /*******/
+  .mainmenu .collapse ul ul li {
+    position: relative
+  }
+  .mainmenu .collapse ul ul li:hover > ul {
+    display: block
+  }
+  .mainmenu .collapse ul ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 250px;
+    display: none
+  }
+  /*******/
+  .mainmenu .collapse ul ul ul li {
+    position: relative
+  }
+  .mainmenu .collapse ul ul ul li:hover ul {
+    display: block
+  }
+  .mainmenu .collapse ul ul ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 250px;
+    display: none;
+    z-index: 1
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+  .mainmenu ul li a {
+    line-height: 30px;
+  }
+}
+
+.extra-nav-link {
+  padding: 30px 0 0 0;
+  float: right;
+  margin-bottom: 0;
+  position: relative;
+  top: 13px;
+  li{
+    display: inline-block;
+    margin-bottom: 0;
+    a{
+      padding: 3px 0;
+    }
+  }
+}
+
+/*-----------------------------
+search
+-----------------------------*/
+.form-search {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .3s ease-out;
+  transition: opacity .3s ease-out;
+  opacity: 0;
+}
+.form-search .input-group {
+  height: 100%;
+  background-color: #fff;
+}
+.form-search .input-group-btn {
+  height: 100%;
+}
+.form-search .input-group-btn .btn {
+  height: 81px;
+  padding: 0 6px;
+  color: rgba(255, 255, 255, .5);
+  border-radius: 0;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 21px;
+}
+.form-search .input-group-btn .btn:hover {
+  color: #fff;
+  border-color: transparent;
+}
+.form-search .input-group-btn .btn:hover .svg--cross {
+  color: #000;
+
+  fill: #000;
+}
+.form-search .input-group-btn .btn .svg {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+.form-search .input-group-btn .btn .svg--cross {
+  width: 16px;
+  height: 16px;
+  color: #141414;
+
+  fill: #141414;
+}
+.form-search .input-group-btn .btn .svg--cross .svg__icon {
+  width: 100%;
+  height: 100%;
+}
+.form-search .form-control {
+  height: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  color: #141414;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.form-search--visible {
+  visibility: visible;
+  height: 81px;
+  opacity: 1;
+}
+//
+//.menu,
+//.tb-attr {
+//  -webkit-transition: opacity .3s ease-out;
+//  transition: opacity .3s ease-out;
+//  opacity: 1;
+//}
+
+.hidden-for-search-appear {
+  opacity: 0;
+}

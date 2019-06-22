@@ -1,0 +1,116 @@
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+
+  .app-header {
+    padding: 0;
+    .navbar{
+      padding: .5rem 0;
+    }
+    .navbar-nav {
+      margin-top: 1rem;
+    }
+  }
+
+  .navbar-toggler-icon {
+    line-height: 1.6em;
+    //color: $white;
+    position: relative;
+    right: -16px;
+  }
+
+  .navbar-toggler {
+    color: #333;
+    &:hover, &:focus{
+      background: #fff;
+      border: none;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+  .woocommerce ul.order_details li {
+    width: 48%;
+    margin: 0;
+    border: 1px dashed #d3ced2;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    padding: 20px;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  .hero .hero-content .hero-title  {
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  .section-title {
+    margin-bottom: 3rem;
+  }
+
+  .section-title .title,
+  .parallax h2,
+  .img-block-txt h2{
+    font-size: 24px;
+  }
+
+  .h5, h5 {
+    font-size: 1rem;
+  }
+
+  .space-3 {
+    padding: 3rem 0;
+  }
+
+  .space-adjust {
+    margin-top: -3rem;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .hero .hero-content .hero-title {
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  .section-title {
+    margin-bottom: 3rem;
+  }
+
+  .section-title .title {
+    font-size: 24px;
+  }
+
+  section, .text-left {
+    text-align: center !important;
+  }
+
+  .text-left-sm{
+    text-align: left !important;
+  }
+
+  .woocommerce-MyAccount-navigation {
+    text-align: left;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 479px) {
+
+}

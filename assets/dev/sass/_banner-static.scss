@@ -1,0 +1,71 @@
+/*------------------------------------
+  hero static banner
+------------------------------------*/
+
+.hero{
+    position: relative;
+    display: table;
+    width: 100%;
+    padding: 0;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    .hero-content {
+        display: table-cell;
+        transform: translateY(0rem);
+        vertical-align: middle;
+
+        .hero-title{
+            font-weight: bold;
+        }
+        .hero-sub-title {
+            font-size: 18px;
+        }
+        .hero-action {
+            margin-top: 5rem;
+        }
+        .hero-link {
+          font-size: 20px;
+          color: #8c8c8c;
+          border-bottom: 1px solid #8c8c8c;
+          &:hover{
+            padding-bottom: 3px;
+          }
+        }
+    }
+
+}
+
+.hero-inner {
+  height: 200px;
+  margin-top: 75px;
+
+  .hero-content{
+    transform: translateY(0rem);
+    .hero-title {
+      margin: 0;
+    }
+  }
+
+}
+
+.base-gradient {
+  position: relative;
+  height: 100%;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right,#9d5df5,#3477f2);
+    opacity: .8;
+  }
+}
+
+.inner-banner {
+  height: 460px;
+}
