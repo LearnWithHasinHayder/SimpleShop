@@ -19,6 +19,9 @@ if(class_exists('Kirki')){
 		'title'          => esc_html__( 'Homepage Settings', 'kirki' ),
 		'panel'          => SIMPLESHOP_CUSTOMIZER_PANEL_ID,
 		'priority'       => 160,
+		'active_callback' => function(){
+			return is_page_template('page-templates/homepage.php');
+		}
 	) );
 
 	Kirki::add_field( SIMPLESHOP_CUSTOMIZER_CONFIG_ID, [
