@@ -40,9 +40,45 @@ if ( class_exists( 'Kirki' ) ) {
 	Kirki::add_field( SIMPLESHOP_CUSTOMIZER_CONFIG_ID, [
 		'type'            => 'text',
 		'settings'        => 'simpleshop_homepage_categories_title',
-		'label'           => esc_html__( 'Text Control', 'simpleshop' ),
+		'label'           => esc_html__( 'Categories Section Title', 'simpleshop' ),
 		'section'         => 'simpleshop_homepage',
 		'default'         => esc_html__( 'Shop By Category', 'simpleshop' ),
+		'priority'        => 10,
+		'active_callback' => [
+			[
+				'setting'  => 'simpleshop_homepage_display_categories',
+				'operator' => '==',
+				'value'    => true
+			]
+		]
+	] );
+
+	Kirki::add_field( SIMPLESHOP_CUSTOMIZER_CONFIG_ID, [
+		'type'     => 'switch',
+		'settings' => 'simpleshop_homepage_display_categories_number',
+		'label'    => esc_html__( 'Display Numbers Beside Category', 'simpleshop' ),
+		'section'  => 'simpleshop_homepage',
+		'default'  => '1',
+		'priority' => 10,
+		'choices'  => [
+			'on'  => esc_html__( 'Display', 'simpleshop' ),
+			'off' => esc_html__( 'Hide', 'simpleshop' ),
+		],
+		'active_callback' => [
+			[
+				'setting'  => 'simpleshop_homepage_display_categories',
+				'operator' => '==',
+				'value'    => true
+			]
+		]
+	] );
+
+	Kirki::add_field( SIMPLESHOP_CUSTOMIZER_CONFIG_ID, [
+		'type'            => 'text',
+		'settings'        => 'simpleshop_homepage_categories_col',
+		'label'           => esc_html__( 'Number of Columns', 'simpleshop' ),
+		'section'         => 'simpleshop_homepage',
+		'default'         => 3,
 		'priority'        => 10,
 		'active_callback' => [
 			[
